@@ -9,10 +9,12 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageOutputPath>../nuget</PackageOutputPath>
-    <Description>Project description.</Description>
+    <Description>Project to manage fiile</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/RenatoPacheco/BitHelp.Core.ManageFile</RepositoryUrl>
-    <PackageReleaseNotes>Package release note.</PackageReleaseNotes>
+    <PackageReleaseNotes>Manage file
+* CheckSUM
+* MimeType</PackageReleaseNotes>
     <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
   </PropertyGroup>
 

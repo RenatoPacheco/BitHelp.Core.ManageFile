@@ -5,20 +5,20 @@ namespace BitHelp.Core.ManageFile
 {
     public static class MimeType
     {
-        public static string Obter(string extensao)
+        public static string Get(string extension)
         {
-            if (extensao == null)
-                throw new ArgumentNullException("extensao");
+            if (extension == null)
+                throw new ArgumentNullException(nameof(Exception));
 
-            if (string.IsNullOrWhiteSpace(extensao))
+            if (string.IsNullOrWhiteSpace(extension))
                 return string.Empty;
 
-            if (!extensao.StartsWith("."))
-                extensao = "." + extensao;
+            extension = $".{extension.Trim()}";
+            extension = extension.Substring(extension.LastIndexOf("."));
 
             string mime;
 
-            return _mappings.TryGetValue(extensao, out mime) ? mime : "application/octet-stream";
+            return _mappings.TryGetValue(extension, out mime) ? mime : "application/octet-stream";
         }
 
         private static IDictionary<string, string> _mappings = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase) {

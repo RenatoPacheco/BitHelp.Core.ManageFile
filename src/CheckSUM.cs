@@ -18,10 +18,8 @@ namespace BitHelp.Core.ManageFile
                 using (var md5 = new MD5CryptoServiceProvider())
                     return GetHash(filePath, md5);
             }
-            else
-            {
-                return string.Empty;
-            }
+
+            return string.Empty;
         }
 
         /// <summary>
