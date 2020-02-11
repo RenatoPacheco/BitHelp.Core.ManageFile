@@ -16,12 +16,10 @@ namespace BitHelp.Core.ManageFile
             extension = $".{extension.Trim()}";
             extension = extension.Substring(extension.LastIndexOf("."));
 
-            string mime;
-
-            return _mappings.TryGetValue(extension, out mime) ? mime : "application/octet-stream";
+            return _mappings.TryGetValue(extension, out string mime) ? mime : "application/octet-stream";
         }
 
-        private static IDictionary<string, string> _mappings = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase) {
+        private static readonly IDictionary<string, string> _mappings = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase) {
 
         #region Big freaking list of mime types
         // combination of values from Windows 7 Registry and 
