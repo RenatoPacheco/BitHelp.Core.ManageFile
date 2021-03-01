@@ -588,7 +588,8 @@ namespace BitHelp.Core.ManageFile
         {".xtp", "application/octet-stream"},
         {".xwd", "image/x-xwindowdump"},
         {".z", "application/x-compress"},
-        {".zip", "application/x-zip-compressed"},
+        {".zip", "application/x-zip-compressed" },
+        {".svg", "image/svg+xml"},
         #endregion
         };
     }

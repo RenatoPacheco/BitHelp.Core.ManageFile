@@ -30,6 +30,14 @@ namespace BitHelp.Core.ManageFile.Test
         }
 
         [Fact]
+        public void Check_file_dot_svg()
+        {
+            Assert.Equal("image/svg+xml", MimeType.Get("file.svg"));
+            Assert.Equal("image/svg+xml", MimeType.Get("file.svg"));
+            Assert.Equal("image/svg+xml", MimeType.Get("file.svg"));
+        }
+
+        [Fact]
         public void Check_null()
         {
             Assert.Throws<ArgumentNullException>(() => MimeType.Get(null));
