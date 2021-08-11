@@ -5,36 +5,40 @@ namespace BitHelp.Core.ManageFile.Test
 {
     public class MimeTypeTest
     {
-        [Fact]
-        public void Check_pdf()
+        [Theory]
+        [InlineData("application/pdf", "pdf")]
+        [InlineData("application/pdf", "PDF")]
+        [InlineData("application/pdf", "PdF")]
+        public void Check_pdf(string reference, string compare)
         {
-            Assert.Equal("application/pdf", MimeType.Get("pdf"));
-            Assert.Equal("application/pdf", MimeType.Get("PDF"));
-            Assert.Equal("application/pdf", MimeType.Get("PdF"));
+            Assert.Equal(reference, MimeType.Get(compare));
         }
 
-        [Fact]
-        public void Check_dot_jpg()
+        [Theory]
+        [InlineData("image/jpeg", ".jpg")]
+        [InlineData("image/jpeg", ".JPG")]
+        [InlineData("image/jpeg", ".JpG")]
+        public void Check_dot_jpg(string reference, string compare)
         {
-            Assert.Equal("image/jpeg", MimeType.Get(".jpg"));
-            Assert.Equal("image/jpeg", MimeType.Get(".JPG"));
-            Assert.Equal("image/jpeg", MimeType.Get(".JpG"));
+            Assert.Equal(reference, MimeType.Get(compare));
         }
 
-        [Fact]
-        public void Check_file_dot_png()
+        [Theory]
+        [InlineData("image/png", "file.png")]
+        [InlineData("image/png", "file.PNG")]
+        [InlineData("image/png", "file.PnG")]
+        public void Check_file_dot_png(string reference, string compare)
         {
-            Assert.Equal("image/png", MimeType.Get("file.png"));
-            Assert.Equal("image/png", MimeType.Get("file.png"));
-            Assert.Equal("image/png", MimeType.Get("file.png"));
+            Assert.Equal(reference, MimeType.Get(compare));
         }
 
-        [Fact]
-        public void Check_file_dot_svg()
+        [Theory]
+        [InlineData("image/svg+xml", "file.svg")]
+        [InlineData("image/svg+xml", "file.SVG")]
+        [InlineData("image/svg+xml", "file.SvG")]
+        public void Check_file_dot_svg(string reference, string compare)
         {
-            Assert.Equal("image/svg+xml", MimeType.Get("file.svg"));
-            Assert.Equal("image/svg+xml", MimeType.Get("file.svg"));
-            Assert.Equal("image/svg+xml", MimeType.Get("file.svg"));
+            Assert.Equal(reference, MimeType.Get(compare));
         }
 
         [Fact]
@@ -43,11 +47,12 @@ namespace BitHelp.Core.ManageFile.Test
             Assert.Throws<ArgumentNullException>(() => MimeType.Get(null));
         }
 
-        [Fact]
-        public void Check_empty()
+        [Theory]
+        [InlineData("")]
+        [InlineData("     ")]
+        public void Check_empty(string compare)
         {
-            Assert.Equal(string.Empty, MimeType.Get(string.Empty));
-            Assert.Equal(string.Empty, MimeType.Get("        "));
+            Assert.Equal(string.Empty, MimeType.Get(compare));
         }
     }
 }
