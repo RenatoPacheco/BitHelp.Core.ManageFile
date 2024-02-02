@@ -4,6 +4,9 @@
 [![Integration Tests](https://github.com/RenatoPacheco/BitHelp.Core.ManageFile/workflows/Integration%20Tests/badge.svg?branch=master)](https://github.com/RenatoPacheco/BitHelp.Core.ManageFile/actions/workflows/integration-tests.yml)
 [![NuGet](https://img.shields.io/nuget/v/BitHelp.Core.ManageFile.svg)](https://nuget.org/packages/BitHelp.Core.ManageFile)
 [![Nuget](https://img.shields.io/nuget/dt/BitHelp.Core.ManageFile.svg)](https://nuget.org/packages/BitHelp.Core.ManageFile)
+[![codecov](https://codecov.io/gh/RenatoPacheco/BitHelp.Core.ManageFile/branch/master/graph/badge.svg?token=6YLN9GKD8X)](https://codecov.io/gh/RenatoPacheco/BitHelp.Core.ManageFile)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=RenatoPacheco_BitHelp.Core.ManageFile&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=RenatoPacheco_BitHelp.Core.ManageFile)
+
 
 This project contains some classes that allow you to manipulate or extract information from files.
 
