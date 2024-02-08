@@ -32,11 +32,10 @@ dotnet add package BitHelp.Core.ManageFile
 
 ## Latest releases
 
-#### Release 0.3.0
+### Release 0.4.0
 
-**Features:**
-
-- Adding svg type
+- feat: Adding mine type to .ism/manifest(format=m3u8-cmaf)
+- feat: Adding mine type to .ism/manifest(format=mpd-time-cmaf)
 
 To read about others releases access [RELEASES.md](./RELEASES.md)
 
