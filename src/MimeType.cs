@@ -205,6 +205,8 @@ namespace BitHelp.Core.ManageFile
         {".iii", "application/x-iphone"},
         {".ism/manifest", "application/vnd.ms-sstr+xml"},
         {".ism/manifest(format=m3u8-aapl)", "application/x-mpegURL"},
+        {".ism/manifest(format=m3u8-cmaf)", "application/x-mpegURL"},
+        {".ism/manifest(format=mpd-time-cmaf)", "application/dash+xml"},
         {".inc", "text/plain"},
         {".inf", "application/octet-stream"},
         {".inl", "text/plain"},

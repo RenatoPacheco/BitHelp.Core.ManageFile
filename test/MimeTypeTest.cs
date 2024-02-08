@@ -41,6 +41,18 @@ namespace BitHelp.Core.ManageFile.Test
             Assert.Equal(reference, MimeType.Get(compare));
         }
 
+        [Theory]
+        [InlineData("application/vnd.ms-sstr+xml", "file.ism/manifest")]
+        [InlineData("application/x-mpegURL", "file.ism/manifest(format=m3u8-aapl)")]
+        [InlineData("audio/x-mpegurl", "file.m3u8")]
+        [InlineData("video/mp4", "file.mp4")]
+        [InlineData("application/x-mpegURL", "file.ism/manifest(format=m3u8-cmaf)")]
+        [InlineData("application/dash+xml", "file.ism/manifest(format=mpd-time-cmaf)")]
+        public void Check_file_video(string reference, string compare)
+        {
+            Assert.Equal(reference, MimeType.Get(compare));
+        }
+
         [Fact]
         public void Check_null()
         {
