@@ -42,6 +42,7 @@ namespace BitHelp.Core.ManageFile.Test
         }
 
         [Theory]
+        [InlineData("application/dash+xml", "file.mpd")]
         [InlineData("application/vnd.ms-sstr+xml", "file.ism/manifest")]
         [InlineData("application/x-mpegURL", "file.ism/manifest(format=m3u8-aapl)")]
         [InlineData("audio/x-mpegurl", "file.m3u8")]
