@@ -32,10 +32,9 @@ dotnet add package BitHelp.Core.ManageFile
 
 ## Latest releases
 
-### Release 0.4.0
+### Release 0.5.0
 
-- feat: Adding mine type to .ism/manifest(format=m3u8-cmaf)
-- feat: Adding mine type to .ism/manifest(format=mpd-time-cmaf)
+- feat: Adding mine type to .mpd
 
 To read about others releases access [RELEASES.md](./RELEASES.md)
 
