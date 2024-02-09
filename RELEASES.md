@@ -1,5 +1,9 @@
 # BitHelp.Core.Validation
 
+### Release 0.5.0
+
+- feat: Adding mine type to .mpd
+
 ### Release 0.4.0
 
 - feat: Adding mine type to .ism/manifest(format=m3u8-cmaf)
