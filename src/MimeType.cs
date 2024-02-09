@@ -288,6 +288,7 @@ namespace BitHelp.Core.ManageFile
         {".mp4", "video/mp4"},
         {".mp4v", "video/mp4"},
         {".mpa", "video/mpeg"},
+        {".mpd", "application/dash+xml"},
         {".mpe", "video/mpeg"},
         {".mpeg", "video/mpeg"},
         {".mpf", "application/vnd.ms-mediapackage"},
